@@ -41,8 +41,8 @@ function createPassengers(): Reservation {
   const passengers = randomPassengers();
   return {
     id: chance.hash({length: 6, casing: 'upper'}),
-    journeyId: `${tripDate.getFullYear()}-${tripDate.getMonth()}-${
-      tripDate.getDay()
+    journeyId: `${tripDate.getFullYear()}-${tripDate.getMonth()+1}-${
+      tripDate.getDate()
     }:${vessel.replace(" ", "")}`,
     shipName: vessel,
     tripDate,
